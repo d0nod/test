@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1800.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FImeniK.FImeniKController">
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+            <Label text="Tko? Što?">
+               <padding>
+                  <Insets left="40.0" right="40.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfIme" alignment="CENTER" prefHeight="32.0" prefWidth="386.0">
+               <padding>
+                  <Insets left="40.0" right="40.0" />
+               </padding>
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </TextField>
+            <Label text="Lokacija">
+               <padding>
+                  <Insets left="40.0" right="40.0" />
+               </padding>
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfLokacija" alignment="CENTER" prefHeight="33.0" prefWidth="441.0">
+               <padding>
+                  <Insets left="40.0" right="40.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label>
+               <padding>
+                  <Insets left="40.0" right="40.0" />
+               </padding>
+            </Label>
+          <Button fx:id="btnTraz" mnemonicParsing="false" onAction="#trazi" prefHeight="31.0" prefWidth="137.0" text="Traži" wrapText="true">
+               <padding>
+                  <Insets left="30.0" right="30.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label>
+               <padding>
+                  <Insets left="40.0" right="40.0" />
+               </padding>
+            </Label>
+            <Button fx:id="btnNazad" mnemonicParsing="false" onAction="#back" prefHeight="31.0" prefWidth="307.0" text="Povratak na prošlu stranicu">
+               <padding>
+                  <Insets left="40.0" right="40.0" />
+               </padding>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+        </items>
+      </ToolBar>
+   </top>
+   <center>
+      <SplitPane dividerPositions="0.49318181818181817" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <WebView fx:id="timenik" layoutX="-7.0" layoutY="-2.0" prefHeight="524.0" prefWidth="441.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="-2.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <WebView fx:id="imenik" prefHeight="519.0" prefWidth="444.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="-2.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>
